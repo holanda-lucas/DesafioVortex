@@ -32,6 +32,8 @@ public class RandomizeUpgrades : MonoBehaviour
         // Decorando corretamente cada botão (imagem, texto e cor do texto)
         identifier.SetIdentifier(selection1, up1);
         identifier.SetIdentifier(selection2, up2);
+
+        Debug.Log(selection1 + " " + selection2);
     }
     int CalculateValue()
     {
@@ -97,7 +99,7 @@ public class RandomizeUpgrades : MonoBehaviour
             choose = 1;
         }
 
-        return upgrades + itens + choose;
+        return upgrades + itens + choose + 3;
     }
 
     void RandomOrHelp()

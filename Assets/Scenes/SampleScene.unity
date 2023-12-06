@@ -15855,6 +15855,9 @@ MonoBehaviour:
   records: {fileID: 364295008}
   ray: {fileID: 349214910}
   rayAttatch: {fileID: 1810445185}
+  bag: {fileID: 4737530796782024421}
+  sucker: {fileID: 0}
+  randomizeUpgrades: {fileID: 1362221699}
 --- !u!114 &1564625256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21431,6 +21434,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59168c1704c962459178337c25b3fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTxt: {fileID: 1834053651308912890}
+  scoreTxt: {fileID: 1500962353726101836}
 --- !u!222 &4680194554103030367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21696,6 +21701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59168c1704c962459178337c25b3fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTxt: {fileID: 4880114251780567861}
+  scoreTxt: {fileID: 5628942445059312259}
 --- !u!33 &5554171523471270235
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21995,6 +22002,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59168c1704c962459178337c25b3fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTxt: {fileID: 6325430440016409258}
+  scoreTxt: {fileID: 6516658231292218140}
 --- !u!224 &6389454206054322514
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22282,6 +22291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59168c1704c962459178337c25b3fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTxt: {fileID: 1136056904}
+  scoreTxt: {fileID: 781367487539210685}
 --- !u!1 &6820443267856492439
 GameObject:
   m_ObjectHideFlags: 0
@@ -22539,6 +22550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a59168c1704c962459178337c25b3fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameTxt: {fileID: 4215657731623194978}
+  scoreTxt: {fileID: 3974045165824583892}
 --- !u!1 &7293892308476739448
 GameObject:
   m_ObjectHideFlags: 0

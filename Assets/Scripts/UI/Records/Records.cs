@@ -85,6 +85,10 @@ public class Records : MonoBehaviour
     public void PostRecord()
     {
         StartCoroutine(PostValue());
+
+        // Coloca a tela certa no canvas
+        gameOverScreen.SetActive(false);
+        rankScreen.SetActive(true);
     }
 
     public void Skip()

@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
 
     // Identifica se o player ja possui a skill basedo no seu id
-    public static bool haveFocus;
+    public static bool haveFocus = false;
 
 
     public static float pollutionResistence = 40, dirtness = 0;
@@ -26,7 +26,9 @@ public class GameController : MonoBehaviour
     private bool gameOver = false;
 
     [SerializeField] private Records records;
-    [SerializeField] private GameObject ray, rayAttatch;
+    [SerializeField] private GameObject ray, rayAttatch, bag, sucker;
+
+    public RandomizeUpgrades randomizeUpgrades;
 
     private void Start()
     {
@@ -68,6 +70,9 @@ public class GameController : MonoBehaviour
             // Ativando o raio de interação com o UI
             ray.SetActive(true);
             rayAttatch.SetActive(true);
+
+            bag.SetActive(false);
+            sucker.SetActive(false);
         }
     }
 
