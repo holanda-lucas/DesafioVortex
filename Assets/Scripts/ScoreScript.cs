@@ -6,8 +6,8 @@ using UnityEngine;
 public class ScoreScript : MonoBehaviour
 {
     private TMP_Text visor;
-    public static float timePassed;
-    public static bool passTime = true;
+    public float timePassed;
+    public bool passTime = true;
 
     void Awake()
     {

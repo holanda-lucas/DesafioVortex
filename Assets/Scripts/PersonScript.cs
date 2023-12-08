@@ -25,6 +25,8 @@ public class PersonScript : MonoBehaviour
     private bool dancing = false;
     private ParticleSystem particles;
     private AudioSource boogieMusic, throwSound;
+
+    public bool inactive = true;
  
 
     void Start()
@@ -42,6 +44,11 @@ public class PersonScript : MonoBehaviour
 
         // Calculando posição inicial
         CalculateDestination();
+
+        if (inactive)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void Update()

@@ -30,6 +30,8 @@ public class Recycler : MonoBehaviour
 
     private AudioSource doorSound;
 
+    [SerializeField] private Tutorial tutorial;
+
     private void Start()
     {
         bag = GameObject.Find("Bag").transform.GetChild(0).GetComponent<BagScript>();
@@ -82,6 +84,8 @@ public class Recycler : MonoBehaviour
         {
             doorAnim.SetBool("IsOpen", false);
             doorSound.Play();
+
+            tutorial.StartRecycleTutorial();
         }
 
         // Ajustando o tamanho da barra para ficar condizente com o tempo de reciclagem
@@ -129,7 +133,6 @@ public class Recycler : MonoBehaviour
                 else
                 {
                     currentPoints = pointsToReward;
-
                 }
 
                 Destroy(other.gameObject);
@@ -157,6 +160,13 @@ public class Recycler : MonoBehaviour
                 bag.dirtnessPoints = 0;
             }
             else if (other.transform.tag.Equals("sucker"))
+            {
+                other.transform.position = spawnPoint.position;
+            }
+        }
+        else
+        {
+            if (other.tag.Equals("boogie") || other.tag.Equals("sucker") || other.tag.Equals("bag") || other.tag.Equals("trash"))
             {
                 other.transform.position = spawnPoint.position;
             }

@@ -7,8 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 public class GameController : MonoBehaviour
 {
     public static float attractionRadius = 10;
-    public static bool haveAntenna = false, haveSucker = true
-;
+    public static bool haveAntenna = false, haveSucker = true, haveBag = false;
 
     [SerializeField] private Volume dirty;
 
@@ -29,6 +28,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject ray, rayAttatch, bag, sucker;
 
     public RandomizeUpgrades randomizeUpgrades;
+
+    public GameObject[] people;
+    public ScoreScript scoreScript;
+
+    public SuckerScript suckerScript;
+    public BagScript bagScript;
 
     private void Start()
     {
@@ -55,13 +60,12 @@ public class GameController : MonoBehaviour
             gameOver = true;
 
             playerMovement.transform.position = finalSpawnPosition.position;
-            records.scoreGot = (int)ScoreScript.timePassed;
+            records.scoreGot = (int)scoreScript.timePassed;
             records.scoreGotTxt.text = "Pontuação: " + records.scoreGot;
-            ScoreScript.passTime = false;
+            scoreScript.passTime = false;
             RemoveAllTrash();
             
             // Retirando todos os inimigos
-            GameObject[] people = GameObject.FindGameObjectsWithTag("person");
             foreach (GameObject person in people)
             {
                 Destroy(person);
@@ -73,17 +77,32 @@ public class GameController : MonoBehaviour
 
             bag.SetActive(false);
             sucker.SetActive(false);
+
+            // Resetando variáveis
+            pollutionResistence = 40;
+            dirtness = 0;
+            haveAntenna = false;
+            haveFocus = false;
+            haveBag = false;
+            attractionRadius = 10;
+            playerSpeed = 2;
         }
     }
 
-    public static void RemoveAllTrash()
+    public void RemoveAllTrash()
     {
         GameObject[] trashes = GameObject.FindGameObjectsWithTag("trash");
 
         foreach (GameObject trash in trashes)
         {
-            dirtness--;
             Destroy(trash);
         }
+
+        suckerScript.trashesList.Clear();
+
+        bagScript.currentPoints = 0;
+        suckerScript.currentPoints = 0;
+
+        dirtness = 0;
     }
 }

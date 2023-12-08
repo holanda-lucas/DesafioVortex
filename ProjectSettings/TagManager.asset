@@ -9,6 +9,7 @@ TagManager:
   - suck
   - person
   - sucker
+  - boogie
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - ground
   - person
   - trash
-  - 
+  - player
   - 
   - 
   - 

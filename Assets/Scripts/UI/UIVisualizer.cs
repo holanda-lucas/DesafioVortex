@@ -9,14 +9,18 @@ public class UIVisualizer : MonoBehaviour
     private Transform cameraTR;
 
     [SerializeField] private TMP_Text text;
-    private Transform textTR;
+    [SerializeField] private Transform textTR;
 
     public bool show = true;
 
     void Start()
     {
-        textTR = text.transform;
         cameraTR = GameObject.Find("Main Camera").transform;
+
+        if (textTR == null)
+        {
+            textTR = text.transform;
+        }
     }
 
     void Update()

@@ -15,7 +15,7 @@ public class SuckerScript : MonoBehaviour
 
 
     [SerializeField] private GameObject[] trashesPrefabs;
-    [SerializeField] private List<GameObject> trashesList;
+    public List<GameObject> trashesList;
 
     public float attractionForce;
     [SerializeField] private Transform outPoint;
@@ -30,6 +30,8 @@ public class SuckerScript : MonoBehaviour
     private float goingOut;
 
     [SerializeField] private AudioSource suckingSound, outSound;
+
+    [SerializeField] private Tutorial tutorial;
 
     private void Start()
     {
@@ -187,6 +189,8 @@ public class SuckerScript : MonoBehaviour
 
         Hands enumSearch = (Hands)Enum.Parse(typeof(Hands), name);
         handState = (int)enumSearch;
+
+        tutorial.StartTrashTutorial();
     }
 
     public void ExitEvent(SelectExitEventArgs ev)

@@ -16,7 +16,7 @@ public class Records : MonoBehaviour
     [SerializeField] private TMP_InputField input;
     public TMP_Text scoreGotTxt;
 
-    [SerializeField] GameObject gameOverScreen, rankScreen;
+    [SerializeField] GameObject gameOverScreen, rankScreen, keyboard;
 
     public int scoreGot = 0;
 
@@ -89,6 +89,8 @@ public class Records : MonoBehaviour
         // Coloca a tela certa no canvas
         gameOverScreen.SetActive(false);
         rankScreen.SetActive(true);
+
+        keyboard.SetActive(false);
     }
 
     public void Skip()
@@ -98,6 +100,8 @@ public class Records : MonoBehaviour
         // Coloca a tela certa no canvas
         gameOverScreen.SetActive(false);
         rankScreen.SetActive(true);
+
+        keyboard.SetActive(false);
     }
 
     public void PlayAgain()

@@ -13,14 +13,19 @@ public class UpgradeScript : MonoBehaviour
     [SerializeField] private SuckerScript sucker;
     [SerializeField] private GameObject antenna;
     [SerializeField] private GameObject bombPack;
+    [SerializeField] private GameController gameController;
 
     [SerializeField] private Transform spawnPosition;
 
     [SerializeField] private Animator doorAnim;
     [SerializeField] private GameObject pollutionLevel;
 
+    [SerializeField] private Tutorial tutorial;
+
     public void UpgradePlayer()
     {
+        tutorial.StartScreensTutorial();
+
         switch (selection)
         {
             // Upgrades
@@ -112,6 +117,7 @@ public class UpgradeScript : MonoBehaviour
     void Bag()
     {
         bag.transform.parent.position = spawnPosition.position;
+        GameController.haveBag = true;
     }
 
 
@@ -159,6 +165,6 @@ public class UpgradeScript : MonoBehaviour
 
     void FastClean()
     {
-        GameController.RemoveAllTrash();
+        gameController.RemoveAllTrash();
     }
 }

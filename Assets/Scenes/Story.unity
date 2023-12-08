@@ -449,14 +449,13 @@ GameObject:
   - component: {fileID: 364295005}
   - component: {fileID: 364295004}
   - component: {fileID: 364295007}
-  - component: {fileID: 364295008}
   m_Layer: 5
   m_Name: Canvas Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &364295004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,27 +542,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
---- !u!95 &364295008
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364295002}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4bb8288efb53a014fa88e8654cfe13e2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &386133628
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,12 +555,12 @@ GameObject:
   - component: {fileID: 386133631}
   - component: {fileID: 386133630}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Story
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &386133629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -869,8 +847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicObj: {fileID: 1071470725}
-  title: {fileID: 364295002}
-  story: {fileID: 875942696}
+  title: {fileID: 1503807486}
+  story: {fileID: 386133628}
   fadeAnim: {fileID: 447480762}
 --- !u!95 &447480762 stripped
 Animator:
@@ -896,7 +874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &875942697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,13 +1178,14 @@ GameObject:
   - component: {fileID: 1503807487}
   - component: {fileID: 1503807489}
   - component: {fileID: 1503807488}
+  - component: {fileID: 1503807490}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1503807487
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1257,7 +1236,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285724671
+    rgba: 7534591
   m_fontColor: {r: 1, g: 0.96674997, b: 0.4481132, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1325,6 +1304,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503807486}
   m_CullTransparentMesh: 1
+--- !u!95 &1503807490
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503807486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4bb8288efb53a014fa88e8654cfe13e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1564625251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +1916,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2114801928}
+    - target: {fileID: 7678697594871069144, guid: 551da72de695b764db7717938598d98e,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7822903341414428581, guid: 551da72de695b764db7717938598d98e,
         type: 3}
       propertyPath: m_Name

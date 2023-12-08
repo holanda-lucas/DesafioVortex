@@ -702,11 +702,12 @@ GameObject:
   - component: {fileID: 8037749077805677335}
   - component: {fileID: 7824391839816211076}
   - component: {fileID: 5511507197373609006}
-  - component: {fileID: 8046812769685146857}
   - component: {fileID: 2729392699882250842}
+  - component: {fileID: 7332274627682234943}
+  - component: {fileID: 8915797807868331321}
   m_Layer: 0
   m_Name: Boogie Bomb (2)
-  m_TagString: Untagged
+  m_TagString: boogie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -916,8 +917,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &8046812769685146857
-CapsuleCollider:
+--- !u!114 &2729392699882250842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4108962993398963115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7332274627682234943
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -934,12 +947,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9319153
-  m_Height: 3.38
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1.848202, y: 2.594628, z: 1.748047}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2729392699882250842
+--- !u!114 &8915797807868331321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -948,9 +959,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4108962993398963115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Script: {fileID: 11500000, guid: 2777088490522a846b4615312a8c3dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
+  noGravity: 0
 --- !u!1 &4856964763367950639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,11 +1058,12 @@ GameObject:
   - component: {fileID: 8946708444597869280}
   - component: {fileID: 479158769921821604}
   - component: {fileID: 6336453225471402009}
-  - component: {fileID: 7920902380507887448}
   - component: {fileID: 1050426078177280572}
+  - component: {fileID: 4366331323171685522}
+  - component: {fileID: 4733942462701390228}
   m_Layer: 0
   m_Name: Boogie Bomb (5)
-  m_TagString: Untagged
+  m_TagString: boogie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1259,8 +1273,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &7920902380507887448
-CapsuleCollider:
+--- !u!114 &1050426078177280572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4940614117146953839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &4366331323171685522
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1277,12 +1303,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9319153
-  m_Height: 3.38
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1.848202, y: 2.594628, z: 1.748047}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1050426078177280572
+--- !u!114 &4733942462701390228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1291,9 +1315,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4940614117146953839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Script: {fileID: 11500000, guid: 2777088490522a846b4615312a8c3dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
+  noGravity: 0
 --- !u!1 &5170255170091533601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,7 +1354,7 @@ Transform:
   - {fileID: 7584306767768326722}
   - {fileID: 8946708444597869280}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5813556757431829850
 GameObject:
@@ -1674,11 +1700,12 @@ GameObject:
   - component: {fileID: 8086734087405515556}
   - component: {fileID: 7141467393693475615}
   - component: {fileID: 4721698632812542157}
-  - component: {fileID: 189755521137634728}
   - component: {fileID: 1518932369128206470}
+  - component: {fileID: 1046152989345522497}
+  - component: {fileID: 7573783070454582581}
   m_Layer: 0
   m_Name: Boogie Bomb
-  m_TagString: Untagged
+  m_TagString: boogie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1888,8 +1915,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &189755521137634728
-CapsuleCollider:
+--- !u!114 &1518932369128206470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6770023357005615797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1046152989345522497
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1906,12 +1945,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9319153
-  m_Height: 3.38
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8482018, y: 2.5946283, z: 1.7480469}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1518932369128206470
+--- !u!114 &7573783070454582581
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1920,9 +1957,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6770023357005615797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Script: {fileID: 11500000, guid: 2777088490522a846b4615312a8c3dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
+  noGravity: 0
 --- !u!1 &8217583628049576849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,11 +2146,12 @@ GameObject:
   - component: {fileID: 7780235744501980625}
   - component: {fileID: 4467863596025033958}
   - component: {fileID: 3289509992443156333}
-  - component: {fileID: 1545603720219663953}
   - component: {fileID: 8870127979569127844}
+  - component: {fileID: 2422110163237005249}
+  - component: {fileID: 5389519936438565767}
   m_Layer: 0
   m_Name: Boogie Bomb (1)
-  m_TagString: Untagged
+  m_TagString: boogie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2321,8 +2361,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &1545603720219663953
-CapsuleCollider:
+--- !u!114 &8870127979569127844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100352886210384820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &2422110163237005249
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2339,12 +2391,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9319153
-  m_Height: 3.38
-  m_Direction: 1
+  serializedVersion: 3
+  m_Size: {x: 1.848202, y: 2.594628, z: 1.748047}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8870127979569127844
+--- !u!114 &5389519936438565767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2353,9 +2403,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9100352886210384820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Script: {fileID: 11500000, guid: 2777088490522a846b4615312a8c3dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
+  noGravity: 0
 --- !u!1 &9212104864520777567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,11 +2419,12 @@ GameObject:
   - component: {fileID: 7584306767768326722}
   - component: {fileID: 2132500361035282867}
   - component: {fileID: 7138212230692910562}
-  - component: {fileID: 1721228212706930570}
   - component: {fileID: 2865942344674591414}
+  - component: {fileID: 5426025837905334151}
+  - component: {fileID: 6500570576206061821}
   m_Layer: 0
   m_Name: Boogie Bomb (4)
-  m_TagString: Untagged
+  m_TagString: boogie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2581,8 +2634,20 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &1721228212706930570
-CapsuleCollider:
+--- !u!114 &2865942344674591414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9212104864520777567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &5426025837905334151
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2599,12 +2664,10 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.9319153
-  m_Height: 3.38
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2865942344674591414
+  serializedVersion: 3
+  m_Size: {x: 1.848202, y: 2.594628, z: 1.748047}
+  m_Center: {x: 0, y: 0, z: -0}
+--- !u!114 &6500570576206061821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2613,6 +2676,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 9212104864520777567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbfc205570079fa418992a6fcc90df23, type: 3}
+  m_Script: {fileID: 11500000, guid: 2777088490522a846b4615312a8c3dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
+  noGravity: 0
